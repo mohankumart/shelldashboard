@@ -14,20 +14,7 @@ export class DashboardTileComponent implements OnInit {
   data: object = {};
 
   ngOnInit() {
-    this.data = [
-      {
-        name: 'a',
-        value: this.a
-      },
-      {
-        name: 'b',
-        value: this.b
-      },
-      {
-        name: 'c',
-        value: this.c
-      }
-    ];
+
   }
 
 }
