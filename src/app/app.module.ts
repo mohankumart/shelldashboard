@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeComponent } from './home/home.component';
+import { LazyDashboardTileComponent } from './lazy-dashboard-tile/lazy-dashboard-tile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LazyDashboardTileComponent
   ],
   imports: [
     BrowserModule,
