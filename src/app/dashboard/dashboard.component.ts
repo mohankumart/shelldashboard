@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LazyDashboardTileService } from './lazy-dashboard-tile.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private lazyService: LazyDashboardTileService) { }
 
   ngOnInit() {
   }
@@ -23,6 +24,13 @@ export class DashboardComponent implements OnInit {
   addDefault(): void {
     this.add('dashboard-tile');
   }
+
+  addLazy(): void {
+    this.lazyService.load().then(_ => {
+      this.add('lazy-dashboard-tile');
+    });
+  }
+
 
   add(tileKind: string): void {
 

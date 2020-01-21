@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "lazyModules": [
+              "src/app/lazy-dashboard-tile/lazy-dashboard-tile.module"
+            ],
             "outputPath": "dist/shelldashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
